@@ -36,12 +36,12 @@ void loop() {
     count++;
     if (count > 3) {
       float temp = dht.readTemperature();
-      float vlaga = dht.readHumidity();
+      float humidity = dht.readHumidity();
       startupSound();
       Serial.print("CLAP|");
       Serial.print(temp);
       Serial.print("|");
-      Serial.println(vlaga);
+      Serial.println(humidity);
       count = 0;
       delay(2000);
     }
